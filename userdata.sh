@@ -19,7 +19,7 @@ cd $APP_DIR
 apt update -y
 apt install -y git python3 python3-venv python3-pip nginx
 
-git clone https://github.com/saudhikmat/Intent-classifier-local-to-cloud-kserve-Deployment.git .
+git clone https://github.com/saudhikmat/Intent-classifier-model-localdeployment-demo.git .
 
 python3 -m venv .venv
 source .venv/bin/activate
