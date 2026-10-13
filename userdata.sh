@@ -19,7 +19,7 @@ cd $APP_DIR
 apt update -y
 apt install -y git python3 python3-venv python3-pip nginx
 
-git clone https://github.com/saudhikmat/Intent-classifier-local-to-cloud-kserve-Deployment.git.
+git clone https://github.com/saudhikmat/Intent-classifier-local-to-cloud-kserve-Deployment.git /opt/intent-app
 
 python3 -m venv .venv
 source .venv/bin/activate
@@ -54,7 +54,7 @@ server {
     server_name _;
 
     location / {
-        proxy_pass http://127.0.0.1:6000/predict;
+        proxy_pass http://127.0.0.1:6000;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
